@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 210 20% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 20% 15%;
+
+    --primary: 186 72% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 195 30% 94%;
+    --secondary-foreground: 210 20% 15%;
+
+    --muted: 200 20% 95%;
+    --muted-foreground: 210 10% 50%;
+
+    --accent: 195 60% 92%;
+    --accent-foreground: 186 72% 28%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 20% 88%;
+    --input: 200 20% 88%;
+    --ring: 186 72% 38%;
+
+    --radius: 0.625rem;
+
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+
+    --sidebar-background: 210 25% 12%;
+    --sidebar-foreground: 210 10% 85%;
+    --sidebar-primary: 186 72% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 20% 18%;
+    --sidebar-accent-foreground: 186 72% 60%;
+    --sidebar-border: 210 20% 20%;
+    --sidebar-ring: 186 72% 48%;
+
+    --table-header: 186 72% 38%;
+    --table-header-foreground: 0 0% 100%;
+    --table-stripe: 195 30% 97%;
+  }
+
+  .dark {
+    --background: 210 25% 8%;
+    --foreground: 210 10% 92%;
+    --card: 210 25% 12%;
+    --card-foreground: 210 10% 92%;
+    --popover: 210 25% 12%;
+    --popover-foreground: 210 10% 92%;
+    --primary: 186 72% 48%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 210 20% 18%;
+    --secondary-foreground: 210 10% 92%;
+    --muted: 210 20% 15%;
+    --muted-foreground: 210 10% 55%;
+    --accent: 210 20% 18%;
+    --accent-foreground: 186 72% 60%;
+    --destructive: 0 62% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 210 20% 20%;
+    --input: 210 20% 20%;
+    --ring: 186 72% 48%;
+    --sidebar-background: 210 30% 6%;
+    --sidebar-foreground: 210 10% 85%;
+    --sidebar-primary: 186 72% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 25% 12%;
+    --sidebar-accent-foreground: 186 72% 60%;
+    --sidebar-border: 210 25% 12%;
+    --sidebar-ring: 186 72% 48%;
+
+    --table-header: 210 25% 18%;
+    --table-header-foreground: 186 72% 60%;
+    --table-stripe: 210 25% 10%;
+
+    --success: 152 60% 42%;
+    --success-foreground: 0 0% 100%;
+    --warning: 38 92% 50%;
+    --warning-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(186 72% 38%) 0%, hsl(195 80% 32%) 100%);
+  }
+  .gradient-sidebar {
+    background: linear-gradient(180deg, hsl(210 25% 12%) 0%, hsl(210 30% 8%) 100%);
+  }
+  .shadow-card {
+    box-shadow: 0 1px 3px 0 hsl(210 20% 15% / 0.06), 0 1px 2px -1px hsl(210 20% 15% / 0.06);
+  }
+  .shadow-card-hover {
+    box-shadow: 0 10px 25px -5px hsl(186 72% 38% / 0.1), 0 4px 6px -2px hsl(210 20% 15% / 0.05);
+  }
+}
